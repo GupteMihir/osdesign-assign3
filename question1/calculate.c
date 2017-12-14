@@ -1,7 +1,7 @@
 /******************************
 *Name: Mihir Gupte
 *Date: Dec 13, 2017
-*Description: This program receives numbers for input then performs 3 statistical calculations, each calculation using its own POSIX threads. One thread will calculate the average, another will find the minimum number and another thread to find the maximum number.
+*Description: This program receives numbers as input then performs 3 statistical calculations, each calculation using its own POSIX threads. One thread will calculate the average, another will find the minimum number and another thread to find the maximum number.
 *******************************/
 //Required include files for this program
 #include <stdio.h>
@@ -17,7 +17,7 @@ int averageNum, minimumNum, maximumNum, totalNumbers;
 void *calc_avg(void *num)
 {
 	int *numbers = (int *)num;					//Reference to the number array pointer
-	int sum = 0;								//Variable for sum of all the numbers
+	int sum = 0;							    //Variable for sum of all the numbers
 	for(int j=1;j <= (totalNumbers); j++)		//Iterates through the total numbers provided 
 	{
 		sum += numbers[j];						//Adds the numbers of the array through every iteration
